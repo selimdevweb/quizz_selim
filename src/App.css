@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: rgb(230, 220, 220);
+}
+.card-grid{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap:1rem ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  max-width: 900px;
+  margin: 1rem 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  padding: 0 1.5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group{
+  margin: .5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.form-group >label{
+  color: #777;
+  font-size: .75rem;
+  margin-bottom: .25rem;
+}
+.btn{
+  background-color: hsl(200, 100%, 50%);
   color: white;
+  padding: .5em 1em;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover{
+  background-color: rgb(4, 106, 173);
+  -webkit-animation:jello-horizontal .9s both;animation:jello-horizontal .9s both
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@-webkit-keyframes btn{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes jello-horizontal{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}
